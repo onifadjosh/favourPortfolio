@@ -1,0 +1,259 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #0A0A0A;
+    background: #fff;
+}
+
+header {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 999;
+    transition: box-shadow 0.3s ease;
+}
+
+header.scrolled {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    margin-left: 2rem;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #33333357;
+    text-decoration: underline;
+    transition: all 0.3s ease;
+}
+
+.nav-wrapper {
+
+    width: 50%;
+}
+
+.btn.header-btn {
+    background-color: #0A0A0A;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn.header-btn:hover {
+    background-color: transparent;
+    color: #0A0A0A;
+    border: 2px solid #0A0A0A;
+}
+
+.btn.header-btn:active {
+    transform: scale(0.96);
+}
+
+h1,
+h2,
+h3 {
+    margin-bottom: 0.5rem;
+}
+
+.hero {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hero h2 {
+    font-size: 4rem;
+}
+
+.hero p {
+    max-width: 650px;
+    margin-bottom: 2rem;
+}
+
+.link {
+    background-color: #0A0A0A;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    /* margin-top: 30px; */
+}
+
+.link:hover {
+    background-color: transparent;
+    color: #0A0A0A;
+    border: 2px solid #0A0A0A;
+}
+
+.link:active {
+    transform: scale(0.96);
+}
+
+.section {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+.grid-two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.tools img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.ux-process ol {
+    padding-left: 1rem;
+}
+
+.screens img {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+}
+
+.footer-section {
+    background: #f5f5f5;
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* NAV & HEADER RESPONSIVE FIX */
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Makes logo and hamburger appear side by side */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Media Query for Responsive Layout */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .top-bar {
+        width: 100%;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-wrapper {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .nav-wrapper.show {
+        display: flex;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav a {
+        margin: 0.5rem 0;
+    }
+
+    .btn.header-btn {
+        width: 90%;
+        text-align: center;
+        margin-top: 1rem;
+        margin-left: -10px;
+    }
+}
+
+/* Mobile-friendly font scaling */
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* Make .grid-two stack on small screens */
+@media screen and (max-width: 768px) {
+    .grid-two {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .section {
+        padding: 1.5rem 1rem;
+    }
+
+    .tools img {
+        height: 24px;
+    }
+
+    .screens img {
+        border-radius: 8px;
+    }
+
+    footer {
+        padding: 1.5rem 1rem;
+    }
+}
