@@ -66,6 +66,7 @@ nav a {
     text-decoration: none;
     transition: all 0.3s ease;
     border: 2px solid transparent;
+    text-align: center;
 }
 
 .btn.header-btn:hover {
@@ -140,13 +141,21 @@ nav a {
 }
 
 .hero-right2 {
-    width: 39%;
-    flex: 1 1 40%;
+    width: 100%;
+    /* flex: 1 1 40%; */
+    display: flex;
+    justify-content: end;
+    
     text-align: right;
-    margin-left: 48rem;
-    ;
+    /* margin-left: 48rem; */
     margin-top: -12rem;
+   
     font-size: 1.5rem;
+}
+
+.hero-right2>p{
+    width: 39%;
+    text-align: right;
 }
 
 .section {
